@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.render('pages/index')
 })
 
+app.get('/foo', (req, res) => {
+  res.json({foo:'bar'})
+})
+
 const server = app.listen(port, () => {
   console.log(`Listening on ${port}`)
 })
